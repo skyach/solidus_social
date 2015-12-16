@@ -1,5 +1,5 @@
 require 'spree_core'
-require 'spree_auth_devise'
+require 'solidus_auth_devise'
 require 'omniauth-twitter'
 require 'omniauth-facebook'
 require 'omniauth-github'
