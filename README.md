@@ -1,7 +1,7 @@
-# Solidus Social
+# Spree Social
 
-Core for all social media related functionality for Solidus.
-The Solidus Social gem handles authorization, account creation and association through social media sources such as Twitter and Facebook.
+Core for all social media related functionality for Spree.
+The Spree Social gem handles authorization, account creation and association through social media sources such as Twitter and Facebook.
 This gem is beta at best and should be treated as such.
 Features and code base will change rapidly as this is under active development.
 Use with caution.
@@ -12,12 +12,12 @@ Use with caution.
 
 Add this extension to your `Gemfile`:
 ```ruby
-gem 'solidus_social', github: 'skyach/solidus_social'
+gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
 ```
 
 Then run:
 ```sh
-$ bundle && bundle exec rails g solidus_social:install
+$ bundle && bundle exec rails g spree_social:install
 $ bundle exec rake db:migrate
 ```
 
@@ -31,7 +31,7 @@ Spree::SocialConfig[:path_prefix] = '' # for /auth/:provider
 
 ---
 
-## Solidus Setup to Utilize OAuth Sources
+## Spree Setup to Utilize OAuth Sources
 
 Login as an admin user and navigate to Configuration > Social Authentication Methods
 
