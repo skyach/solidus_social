@@ -20,10 +20,9 @@ Gem::Specification.new do |s|
   s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
+  
 
-  solidus_version = [">= 1.1.0.alpha", "< 2"]
-
-  s.add_dependency "solidus_core", solidus_version
+  s.add_dependency "solidus_core"
   s.add_runtime_dependency 'omniauth'
   s.add_runtime_dependency 'oa-core'
   s.add_runtime_dependency 'omniauth-twitter'
