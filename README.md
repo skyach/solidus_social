@@ -17,7 +17,7 @@ gem 'solidus_social', github: 'skyach/solidus_social'
 
 Then run:
 ```sh
-$ bundle && bundle exec rails g spree_social:install
+$ bundle && bundle exec rails g solidus_social:install
 $ bundle exec rake db:migrate
 ```
 
