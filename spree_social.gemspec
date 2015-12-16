@@ -5,7 +5,7 @@ require 'spree_social/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'solidus_social'
+  s.name        = 'spree_social'
   s.version     = SpreeSocial.version
   s.summary     = 'Adds social network login services (OAuth) to Spree'
   s.description = s.summary
