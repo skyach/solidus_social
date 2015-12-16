@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.required_ruby_version = '>= 1.9.3'
 
-  s.author   = 'John Dyer'
-  s.email    = 'jdyer@spreecommerce.com'
-  s.homepage = 'http://www.spreecommerce.com'
+  s.author   = 'Rahul Ranchal'
+  s.email    = 'rahul.ranchal@skyach.com'
+  s.homepage = 'http://www.skyach.com'
   s.license  = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
@@ -21,7 +21,9 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_runtime_dependency 'spree_core', '~> 2.4.0'
+  solidus_version = [">= 1.1.0.alpha", "< 2"]
+
+  s.add_dependency "solidus_core", solidus_version
   s.add_runtime_dependency 'omniauth'
   s.add_runtime_dependency 'oa-core'
   s.add_runtime_dependency 'omniauth-twitter'
