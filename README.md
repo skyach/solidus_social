@@ -1,9 +1,6 @@
-# Spree Social
+# Solidus Social
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_social.svg?branch=2-4-stable)](https://travis-ci.org/spree-contrib/spree_social)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_social/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_social)
-
-Core for all social media related functionality for Spree.
+Core for all social media related functionality for Solidus.
 The Spree Social gem handles authorization, account creation and association through social media sources such as Twitter and Facebook.
 This gem is beta at best and should be treated as such.
 Features and code base will change rapidly as this is under active development.
