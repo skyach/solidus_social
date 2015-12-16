@@ -15,7 +15,7 @@ Use with caution.
 
 Add this extension to your `Gemfile`:
 ```ruby
-gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
+gem 'solidus_social', github: 'skyach/spree_social'
 ```
 
 Then run:
