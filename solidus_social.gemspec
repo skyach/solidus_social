@@ -5,7 +5,7 @@ require 'solidus_social/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'solidus_social'
+  s.name        = 'spree_social'
   s.version     = SolidusSocial.version
   s.summary     = 'Adds social network login services (OAuth) to Solidus'
   s.description = s.summary
