@@ -12,7 +12,7 @@ Use with caution.
 
 Add this extension to your `Gemfile`:
 ```ruby
-gem 'solidus_social', github: 'skyach/spree_social'
+gem 'solidus_social', github: 'skyach/solidus_social'
 ```
 
 Then run:

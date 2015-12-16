@@ -1,4 +1,4 @@
-module SpreeSocial
+module SolidusSocial
   module Generators
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: false
@@ -8,7 +8,7 @@ module SpreeSocial
       end
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_social'
+        run 'bundle exec rake railties:install:migrations FROM=solidus_social'
       end
 
       def run_migrations
