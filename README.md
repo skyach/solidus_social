@@ -12,12 +12,12 @@ Use with caution.
 
 Add this extension to your `Gemfile`:
 ```ruby
-gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
+gem 'solidus_social', github: 'spree-contrib/solidus_social', branch: '2-4-stable'
 ```
 
 Then run:
 ```sh
-$ bundle && bundle exec rails g spree_social:install
+$ bundle && bundle exec rails g solidus_social:install
 $ bundle exec rake db:migrate
 ```
 
@@ -114,10 +114,10 @@ OAuth Applications @ Facebook, Twitter and / or Github are supported out of the 
 It is easy to add any OAuth source, given there is an OmniAuth strategy gem for it (and if not, you can easily [write one by yourself](https://github.com/intridea/omniauth/wiki/Strategy-Contribution-Guide). For instance, if you want to add authorization via LinkedIn, the steps will be:
 
 1. Add `gem "omniauth-linkedin"` to your Gemfile, run `bundle install`.
-2. In an initializer file, e.g. `config/initializers/devise.rb`, add and init a new provider for SpreeSocial:
+2. In an initializer file, e.g. `config/initializers/devise.rb`, add and init a new provider for SolidusSocial:
 
-        SpreeSocial::OAUTH_PROVIDERS << ['LinkedIn', 'linkedin']
-        SpreeSocial.init_provider('linkedin')
+        SolidusSocial::OAUTH_PROVIDERS << ['LinkedIn', 'linkedin']
+        SolidusSocial.init_provider('linkedin')
 
 3. Activate your provider as usual (via initializer or admin interface).
 4. Override `spree/users/social` view to render OAuth links in preferred way for a new one to be displayed. Or alternatively, include to your CSS a definition for `.icon-spree-linkedin-circled` and an embedded icon font for LinkedIn from [fontello.com](http://fontello.com/) (the way existing icons for Facebook, Twitter, etc are implemented). You can also override CSS classes for other providers, `.icon-spree-<provider>-circled`, to use different font icons or classic background images, without having to override views.
@@ -137,9 +137,9 @@ Copyright (c) 2014 [John Dyer][7] and [contributors][8], released under the [New
 [3]: https://apps.twitter.com/app/new
 [4]: https://github.com/settings/applications/new
 [5]: http://www.fsf.org/licensing/essays/free-sw.html
-[6]: https://github.com/spree-contrib/spree_social/issues
+[6]: https://github.com/spree-contrib/solidus_social/issues
 [7]: https://github.com/LBRapid
-[8]: https://github.com/spree-contrib/spree_social/graphs/contributors
-[9]: https://github.com/spree-contrib/spree_social/blob/master/LICENSE.md
+[8]: https://github.com/spree-contrib/solidus_social/graphs/contributors
+[9]: https://github.com/spree-contrib/solidus_social/blob/master/LICENSE.md
 [10]: https://login.amazon.com/manageApps
-[11]: https://github.com/spree-contrib/spree_social/blob/master/CONTRIBUTING.md
+[11]: https://github.com/spree-contrib/solidus_social/blob/master/CONTRIBUTING.md

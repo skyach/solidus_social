@@ -1,7 +1,7 @@
-module SpreeSocial
+module SolidusSocial
   module_function
 
-  # Returns the version of the currently loaded SpreeSocial as a
+  # Returns the version of the currently loaded SolidusSocial as a
   # <tt>Gem::Version</tt>.
   def version
     Gem::Version.new VERSION::STRING

@@ -1,13 +1,13 @@
 lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
-require 'spree_social/version'
+require 'solidus_social/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_social'
-  s.version     = SpreeSocial.version
-  s.summary     = 'Adds social network login services (OAuth) to Spree'
+  s.name        = 'solidus_social'
+  s.version     = SolidusSocial.version
+  s.summary     = 'Adds social network login services (OAuth) to Solidus'
   s.description = s.summary
   s.required_ruby_version = '>= 1.9.3'
 

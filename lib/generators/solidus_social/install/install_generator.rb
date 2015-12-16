@@ -1,14 +1,14 @@
-module SpreeSocial
+module SolidusSocial
   module Generators
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: false
 
       def add_stylesheets
-        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', " *= require spree/frontend/spree_social\n", before: /\*\//, verbose: true
+        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', " *= require spree/frontend/solidus_social\n", before: /\*\//, verbose: true
       end
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_social'
+        run 'bundle exec rake railties:install:migrations FROM=solidus_social'
       end
 
       def run_migrations

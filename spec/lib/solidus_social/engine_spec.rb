@@ -1,4 +1,4 @@
-RSpec.describe SpreeSocial do
+RSpec.describe SolidusSocial do
   context 'constants' do
     it { is_expected.to be_const_defined(:OAUTH_PROVIDERS) }
 

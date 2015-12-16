@@ -27,5 +27,5 @@ Starting point:
 * Submit your pull request
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
-[2]: https://github.com/spree-contrib/spree_social/issues
-[3]: https://github.com/spree-contrib/spree_social/blob/master/config/locales
+[2]: https://github.com/spree-contrib/solidus_social/issues
+[3]: https://github.com/spree-contrib/solidus_social/blob/master/config/locales

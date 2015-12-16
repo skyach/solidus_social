@@ -1,4 +1,4 @@
-module SpreeSocial
+module SolidusSocial
   OAUTH_PROVIDERS = [
     %w(Facebook facebook),
     %w(Twitter twitter),
@@ -8,11 +8,11 @@ module SpreeSocial
   ]
 
   class Engine < Rails::Engine
-    engine_name 'spree_social'
+    engine_name 'solidus_social'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer 'spree_social.environment', before: 'spree.environment' do
+    initializer 'solidus_social.environment', before: 'spree.environment' do
       Spree::SocialConfig = Spree::SocialConfiguration.new
     end
 
