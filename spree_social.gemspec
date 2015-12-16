@@ -5,15 +5,15 @@ require 'spree_social/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_social'
+  s.name        = 'solidus_social'
   s.version     = SpreeSocial.version
   s.summary     = 'Adds social network login services (OAuth) to Spree'
   s.description = s.summary
   s.required_ruby_version = '>= 1.9.3'
 
-  s.author   = 'John Dyer'
-  s.email    = 'jdyer@spreecommerce.com'
-  s.homepage = 'http://www.spreecommerce.com'
+  s.author   = 'Rahul Ranchal'
+  s.email    = 'rahul.ranchal@skyach.com'
+  s.homepage = 'http://www.skyach.com'
   s.license  = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
@@ -21,10 +21,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  #solidus_version = [">= 1.1.0.alpha", "< 2"]
-
   s.add_dependency "solidus_core"
-  #, solidus_version
   s.add_runtime_dependency 'omniauth'
   s.add_runtime_dependency 'oa-core'
   s.add_runtime_dependency 'omniauth-twitter'
