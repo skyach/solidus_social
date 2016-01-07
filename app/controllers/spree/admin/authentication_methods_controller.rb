@@ -10,7 +10,7 @@ module Spree
         auth_method = params[:authentication_method]
         return unless auth_method[:active] == 'true' && auth_method[:environment] == ::Rails.env
         Devise.setup do |config|
-          config.omniauth auth_method[:provider], auth_method[:api_key], auth_method[:api_secret], { :skip_jwt => true }
+          config.omniauth auth_method[:provider], auth_method[:api_key], auth_method[:api_secret], { :skip_jwt => true }, :skip_jwt => true
         end
       end
     end

@@ -40,7 +40,7 @@ module SolidusSocial
 
   def self.setup_key_for(provider, key, secret)
     Devise.setup do |config|
-      config.omniauth provider, key, secret, setup: true
+      config.omniauth provider, key, secret, setup: true, skip_jwt: true
     end
   end
 end
