@@ -22,7 +22,7 @@ class Spree::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
           if authentication.present? and authentication.try(:user).present?
             flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: auth_hash['provider'])
-            sign_in :spree_user and redirect_to admin_path and return
+            sign_in authentication.user and redirect_to admin_path and return
           elsif spree_current_user
             spree_current_user.apply_omniauth(auth_hash)
             spree_current_user.save!
