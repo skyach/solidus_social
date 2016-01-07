@@ -23,13 +23,23 @@ class Spree::OmniauthCallbacksController < Devise::OmniauthCallbacksController
             spree_current_user.apply_omniauth(auth_hash)
             spree_current_user.save!
             flash[:notice] = I18n.t('devise.sessions.signed_in')
-            redirect_back_or_default(account_url)
+            if spree_current_user.has_role?("admin")
+            redirect_back_or_default(admin_path)
+          else
+          redirect_back_or_default(account_url)
+        end
           else
             user = Spree::User.find_by_email(auth_hash['info']['email']) || Spree::User.new
             user.apply_omniauth(auth_hash)
             if user.save
               flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: auth_hash['provider'])
-              sign_in_and_redirect :spree_user, user
+              if spree_current_user.has_role?("admin")
+            sign_in_and_redirect :spree_user, admin
+          else
+          sign_in_and_redirect :spree_user, user
+        end
+            
+              
             else
               session[:omniauth] = auth_hash.except('extra')
               flash[:notice] = Spree.t(:one_more_step, kind: auth_hash['provider'].capitalize)
