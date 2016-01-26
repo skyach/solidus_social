@@ -10,7 +10,7 @@ class Spree::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         def #{provider}
           if request.env['omniauth.error'].present?
             flash[:error] = I18n.t('devise.omniauth_callbacks.failure', kind: auth_hash['provider'], reason: Spree.t(:user_was_not_valid))
-            if spree_current_user.has_role?("admin")
+            if spree_current_user.has_spree_role?("admin")
             redirect_back_or_default(admin_url)
           else
           redirect_back_or_default(account_url)
@@ -23,7 +23,7 @@ class Spree::OmniauthCallbacksController < Devise::OmniauthCallbacksController
           if authentication.present? and authentication.try(:user).present?
             flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: auth_hash['provider'])
             sign_in authentication.user 
-            if spree_current_user.has_role?("admin")
+            if spree_current_user.has_spree_role?("admin")
             redirect_back_or_default(admin_url)
           else
             redirect_to root_url
@@ -32,7 +32,7 @@ class Spree::OmniauthCallbacksController < Devise::OmniauthCallbacksController
             spree_current_user.apply_omniauth(auth_hash)
             spree_current_user.save!
             flash[:notice] = I18n.t('devise.sessions.signed_in')
-            if spree_current_user.has_role?("admin")
+            if spree_current_user.has_spree_role?("admin")
             redirect_back_or_default(admin_url)
           else
           redirect_back_or_default(account_url)
